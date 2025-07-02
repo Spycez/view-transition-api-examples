@@ -1,0 +1,63 @@
+div.product {
+    view-transition-name: product;
+}
+
+div.product-image img {
+    view-transition-name: product-image;
+}
+
+div.product-info {
+    view-transition-name: product-info;
+}
+
+@keyframes product-image-anim-in {
+	0% {
+		opacity: 0;
+		transform: scale(0.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes product-image-anim-out {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.2);
+	}
+}
+
+@keyframes product-info-anim-in {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes product-info-anim-out {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(150%);
+	}
+}
+
+::view-transition-group(*) { animation-duration: 1s; }
+
+::view-transition-new(product-image) { animation-name: product-image-anim-in; }
+::view-transition-old(product-image) { animation-name: product-image-anim-out }
+
+::view-transition-new(product-info) { animation-name: product-info-anim-in; }
+::view-transition-old(product-info) { animation-name: product-info-anim-out }

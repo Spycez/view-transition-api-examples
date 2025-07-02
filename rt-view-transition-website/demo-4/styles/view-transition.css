@@ -1,0 +1,128 @@
+/* Enable view transition */
+@view-transition {
+    navigation: auto;
+}
+
+/* Define transition groups */
+div.blog-posts {
+	view-transition-name: posts;
+}
+
+div.blog-post-image {
+	view-transition-name: post-image;
+}
+
+div.blog-post-intro {
+	view-transition-name: post-intro;
+}
+
+div.blog-post-content {
+	view-transition-name: post-content;
+}
+
+/* Animations */
+@keyframes posts-anim-in {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes posts-anim-out {
+	0% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes post-image-anim-in {
+	0% {
+		opacity: 0;
+		transform: scale(0.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes post-image-anim-out {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.2);
+	}
+}
+
+@keyframes post-intro-anim-in {
+	0% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes post-intro-anim-out {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+}
+
+@keyframes post-content-anim-in {
+	0% {
+		opacity: 0;
+		transform: translateY(80%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+@keyframes post-content-anim-out {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(80%);
+	}
+}
+
+/* Assign animations to pseudo elements */
+::view-transition-new(posts) { animation-name: posts-anim-in; }
+::view-transition-old(posts) { animation-name: posts-anim-out; }
+
+::view-transition-new(post-image) { animation-name: post-image-anim-in; }
+::view-transition-old(post-image) { animation-name: post-image-anim-out; }
+
+::view-transition-new(post-intro) { animation-name: post-intro-anim-in; }
+::view-transition-old(post-intro) { animation-name: post-intro-anim-out; }
+
+::view-transition-new(post-content) { animation-name: post-content-anim-in; }
+::view-transition-old(post-content) { animation-name: post-content-anim-out; }
+
+/* Set duration of all animations */
+::view-transition-group(*) { animation-duration: 1s; }
+

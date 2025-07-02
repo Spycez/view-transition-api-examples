@@ -1,0 +1,125 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color: #ffffff;
+    background-color: #282828;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --color-text: ##282828;
+    --content-padding: 50px;
+
+    --color-button-text: #000000;
+    --color-button-bg: #f4c800;
+    --color-button-bg-active: #ffd723;
+    
+    --color-link-text: #f4c800;
+    --color-link-text-active: #ffd723;
+    --color-link-bg: transparent;
+    --color-link-bg-active: rgba(0, 0, 0, 0.2);
+
+    --color-error: #ff5555;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 10px 0;
+    margin: 0;
+    line-height: 1.2;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border: 0;
+}
+
+/* Page
+---------------------------- */
+div.page {
+    width: 100%;
+    padding: var(--content-padding);
+
+    div.page-head {
+        padding: 0 0 20px 0;
+    }
+
+    div.page-body {
+        width: 500px;
+        max-width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+h1 {
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+}
+
+div.not-supported-warning {
+    display: none;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0 0 20px 0;
+    color: var(--color-error);
+    text-overflow: ellipsis;
+    text-align: center;
+    overflow: hidden;
+}
+
+@supports not (view-transition-name: none) {
+    div.not-supported-warning {
+        display: block;
+    }
+}
+
+ul {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+
+    li {
+        display: block;
+        padding: 5px 0;
+
+        a {
+            transition: all 200ms linear;
+
+            &.button {
+                display: block;
+                padding: 15px;
+                font-weight: bold;
+                color: var(--color-button-text);
+                background-color: var(--color-button-bg);
+                border-radius: 3px;
+                text-decoration: none;
+                text-align: left;
+                overflow: clip;
+    
+                &:hover {
+                    color: var(--color-button-text);
+                    background-color: var(--color-button-bg-active);
+                }
+            }
+        }
+    }
+}

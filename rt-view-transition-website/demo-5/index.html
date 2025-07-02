@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <title>Rollercoasters</title>
+        <link rel="preload" href="styles/styles.css" as="style" />
+        <link rel="preload" href="styles/view-transition.css" as="style" />
+        <link rel="preload" href="script.js" as="script" />
+        <link rel="stylesheet" href="styles/styles.css" />
+        <link rel="stylesheet" href="styles/view-transition.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Rollercoasters at Alton Towers</h1>
+        </header>
+        <main>
+
+            <div class="page page-overview active" data-page="overview">
+                <nav>
+                    <a href="#" onclick="showPage('nemesis-reborn')">
+                        <img class="nemesis-reborn" src="/images/rollercoasters/nemesis-reborn.jpg" />
+                        <span>Nemesis Reborn</span>
+                    </a>
+                    <a href="#" onclick="showPage('the-smiler')">
+                        <img class="the-smiler" src="/images/rollercoasters/the-smiler.jpg" />
+                        <span>The Smiler</span>
+                    </a>
+                    <a href="#" onclick="showPage('wicker-man')">
+                        <img class="wicker-man" src="/images/rollercoasters/wicker-man.jpg" />
+                        <span>Wicker Man</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="page page-details" data-page="nemesis-reborn">
+                <a href="#" onclick="showPage('overview')">Go back</a>
+                <img class="nemesis-reborn" src="/images/rollercoasters/nemesis-reborn.jpg" />
+                <h2>Nemesis Reborn</h2>
+                <p>Nemesis Reborn invites the bravest of thrill-seekers amongst the many who visit to take in the awesome power of its unruly domain tackling dominating drops and intense inversions aboard the ride, where control is a mere illusion, the Phalanx have lost all strength and now it's your turn to encounter this terrifying creature.</p>
+            </div>
+
+            <div class="page page-details" data-page="the-smiler">
+                <a href="#" onclick="showPage('overview')">Go back</a>
+                <img class="the-smiler" src="/images/rollercoasters/the-smiler.jpg" />
+                <h2>The Smiler</h2>
+                <p>The Smiler is the world's first 14 loop rollercoaster. It's twisting track combines the world beating 14 loops with a speed of 85 km/hr and a track length 3x longer than Oblivion! This will challenge your body and mind.</p>
+            </div>
+
+            <div class="page page-details" data-page="wicker-man">
+                <a href="#" onclick="showPage('overview')">Go back</a>
+                <img class="wicker-man" src="/images/rollercoasters/wicker-man.jpg" />
+                <h2>Wicker Man</h2>
+                <p>Join the chosen ones on the world's most immersive rollercoaster experience to date, unifying cutting edge special effects with classic wooden coaster technology for the first time! The chosen ones can climb on-board the Beornen’s works train passing further into their secretive world, splintering around a labyrinth of twisted track. The burning embers light the path as the train hurtles towards the six-storey high flaming effigy. Speeding towards the Wicker Man, he spectacularly ignites into flames as the train bursts through his chest three times.</p>
+            </div>
+
+        </main>
+    </body>
+</html>

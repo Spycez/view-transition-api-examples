@@ -1,0 +1,15 @@
+img.nemesis-reborn {
+	view-transition-name: nemesis-reborn;
+}
+
+img.the-smiler {
+	view-transition-name: the-smiler;
+}
+
+img.wicker-man {
+	view-transition-name: wicker-man;
+}
+
+::view-transition-group(*) {
+	animation-duration: 0.5s;
+}
