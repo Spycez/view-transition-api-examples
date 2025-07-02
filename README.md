@@ -1,4 +1,4 @@
-# View Transition API examples
+# View Transition API demos
 
 This project showcases practical examples of using the View Transition API to create smooth, native-like transitions between pages or UI states. Built with Vite for fast development and hot module reloading.
 
